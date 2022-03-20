@@ -9,6 +9,8 @@ export const FocusTimer = () => {
   const [theme, setTheme] = useState(null);
   const [themes, setThemes] = useState(null);
   const myStorage = window.localStorage;
+  const root = document.querySelector(":root");
+  const rootStyle = getComputedStyle(root);
 
   useEffect(() => {
     const getTheme = myStorage.getItem("focusTheme");
@@ -36,8 +38,27 @@ export const FocusTimer = () => {
 
   useEffect(() => {
     const getTheme = myStorage.getItem("focusTheme");
+
     if (getTheme && getTheme !== theme) {
       myStorage.setItem("focusTheme", theme);
+    }
+    if (theme) {
+      const clockColor = rootStyle.getPropertyValue(
+        "--" + theme.theme + "-clockColor"
+      );
+
+      const fontColor = rootStyle.getPropertyValue(
+        "--" + theme.theme + "-fontColor"
+      );
+
+      const backgroundColor = rootStyle.getPropertyValue(
+        "--" + theme.theme + "-backgroundColor"
+      );
+
+      root.style.setProperty("--clockColor", clockColor);
+      root.style.setProperty("--fontColor", fontColor);
+      root.style.setProperty("--backgroundColor", backgroundColor);
+      root.style.setProperty("--deg", theme.buttonDeg);
     }
   }, [theme]);
 
