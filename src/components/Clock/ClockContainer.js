@@ -5,7 +5,7 @@ import Clock from "./Clock";
 
 const ClockContainer = ({ time, setTime, label, buttons, myStorage }) => {
   const [hours, minutes, seconds] = formatClock(time);
-  const [blink, setBlink] = useState(false);
+  const [blink, setBlink] = useState(true);
   const [selected, setSelected] = useState(undefined);
   const [timerId, setTimerId] = useState(null);
   const [blinkId, setBlinkId] = useState(null);
