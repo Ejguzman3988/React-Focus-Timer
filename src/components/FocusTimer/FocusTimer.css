@@ -35,6 +35,7 @@
   font-size: 1.5rem;
   color: var(--clockColor);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   position: sticky;
   width: 100%;
