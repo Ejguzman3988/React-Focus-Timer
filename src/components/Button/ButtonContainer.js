@@ -10,6 +10,11 @@ const ButtonContainer = ({
   setBlink,
 }) => {
   const [timerId, setTimerId] = useState(null);
+  const [blinkId, setBlinkId] = useState(null);
+  const resetTime = () => {
+    setTime(0);
+    setBlink(true);
+  };
 
   const handleSelected = (icon, idx) => {
     idx !== undefined && setSelected(() => idx);
@@ -34,12 +39,14 @@ const ButtonContainer = ({
         clearInterval(blinkId);
         setBlink(true);
         setTimerId(null);
+        setBlinkId(null);
         break;
       }
       case `⏹️`: {
         clearInterval(timerId);
         clearInterval(blinkId);
         setTimerId(null);
+        setBlinkId(null);
         resetTime();
         break;
       }
