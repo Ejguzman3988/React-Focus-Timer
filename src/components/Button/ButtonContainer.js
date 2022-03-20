@@ -67,7 +67,6 @@ const ButtonContainer = ({
           icon={btn}
           selected={selected === idx ? true : false}
           handleSelected={handleSelected}
-          myStorage={myStorage}
         />
       ))}
     </div>

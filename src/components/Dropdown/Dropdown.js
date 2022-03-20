@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Dropdown.css";
+import ThemeOption from "./ThemeOption";
 
-const Dropdown = () => {
+const Dropdown = ({ theme, setTheme, themes, buttons }) => {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <div className="focus__theme">
       <div className="focus__label">Theme: </div>
-      <select className="focus__dropdown">
-        <option className="focus__option">something</option>
-      </select>
+      <ul className="focus__dropdown">
+        {toggle
+          ? themes?.map((theme, idx) => (
+              <ThemeOption
+                key={idx}
+                themeOption={theme}
+                setTheme={setTheme}
+                setToggle={setToggle}
+                buttons={buttons}
+              />
+            ))
+          : theme && (
+              <ThemeOption
+                key={"default"}
+                themeOption={theme}
+                setTheme={setTheme}
+                toggle={toggle}
+                setToggle={setToggle}
+                buttons={[``]}
+              />
+            )}
+      </ul>
     </div>
   );
 };
