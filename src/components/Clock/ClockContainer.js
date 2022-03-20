@@ -49,11 +49,11 @@ const ClockContainer = ({ time, setTime, label, buttons, myStorage }) => {
   };
 
   return (
-    <div className="focus__timer">
-      <div className="focus__label">{label}:</div>
+    <span className="focus__timer">
+      <span className="focus__label">{label}:</span>
       <Clock hours={hours} minutes={minutes} seconds={seconds} blink={blink} />
       <ButtonContainer {...buttonProps} />
-    </div>
+    </span>
   );
 };
 
