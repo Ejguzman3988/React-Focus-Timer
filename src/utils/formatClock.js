@@ -1,4 +1,4 @@
-export default formatClock = (time = 0) => {
+const formatClock = (time = 0) => {
   const hours = Math.floor(time / 3600)
     .toString()
     .padStart(2, "0");
@@ -9,3 +9,5 @@ export default formatClock = (time = 0) => {
 
   return [hours, minutes, seconds];
 };
+
+export default formatClock;
