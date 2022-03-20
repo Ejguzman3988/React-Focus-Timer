@@ -1,0 +1,56 @@
+{
+  "name": "react-focus-timer-v0",
+  "version": "0.0.3",
+  "description": "React Focus Timer is a simple timer that allows you to keep track of how long you focus. This will help you keep track of how long you are developing without getting distracted.",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build-lib": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ejguzman3988/react-focus-timer.git"
+  },
+  "keywords": [
+    "React",
+    "Components",
+    "Component",
+    "Focus",
+    "Timer",
+    "Focus-Timer",
+    "Optimize",
+    "ADHD"
+  ],
+  "author": "Eriberto Guzman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ejguzman3988/react-focus-timer/issues"
+  },
+  "homepage": "https://github.com/Ejguzman3988/react-focus-timer#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-react": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
+    "babel-loader": "^8.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.70.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
