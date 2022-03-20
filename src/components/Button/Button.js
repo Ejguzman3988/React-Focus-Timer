@@ -1,10 +1,11 @@
 import React from "react";
+import "./Button.css";
 
-const Button = ({ idx, icon, selected, handleSelect }) => {
+const Button = ({ idx, icon, selected, handleSelected }) => {
   return (
     <span
       className={selected ? `button button__selected` : `button`}
-      onClick={() => handleSelect(icon, idx)}
+      onClick={() => handleSelected(icon, idx)}
     >
       {icon}
     </span>
