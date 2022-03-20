@@ -1,6 +1,12 @@
-.header {
+.font__header {
   font-size: 3rem;
   font-weight: bolder;
   text-align: center;
   text-decoration: underline;
+  font-family: digital-7;
+}
+
+@font-face {
+  font-family: digital-7;
+  src: url(../../fonts/digital-7.ttf);
 }
