@@ -14,10 +14,9 @@ export const FocusTimer = () => {
         </div>
       </div>
       <div className="focus__theme">
-        {/* Select Component */}
+        {/* Dropdown Component */}
         <div className="focus__label">Theme: </div>
         <select className="focus__dropdown">
-          {/* Option Component */}
           <option className="focus__option">something</option>
         </select>
       </div>
