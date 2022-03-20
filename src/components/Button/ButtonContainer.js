@@ -6,18 +6,16 @@ const ButtonContainer = ({
   selected,
   setSelected,
   setTime,
-  blink,
   setBlink,
+  timerId,
+  setTimerId,
+  blinkId,
+  setBlinkId,
+  resetTime,
+  myStorage,
 }) => {
-  const [timerId, setTimerId] = useState(null);
-  const [blinkId, setBlinkId] = useState(null);
-  const resetTime = () => {
-    setTime(0);
-    setBlink(true);
-  };
-
   const handleSelected = (icon, idx) => {
-    idx !== undefined && setSelected(() => idx);
+    icon === `🔁` || (idx !== undefined && setSelected(() => idx));
     switch (icon) {
       case `▶️`: {
         if (!timerId) {
@@ -51,8 +49,8 @@ const ButtonContainer = ({
         break;
       }
       case `🔁`: {
-        myStorage.removeItem("timerHighScore");
-        setHighScore(0);
+        myStorage.removeItem("focusHighScore");
+        setTime(0);
         break;
       }
       default:
@@ -64,10 +62,12 @@ const ButtonContainer = ({
     <div className="focus__buttons">
       {buttons.map((btn, idx) => (
         <Button
+          key={idx}
           idx={idx}
           icon={btn}
-          selected={selected}
+          selected={selected === idx ? true : false}
           handleSelected={handleSelected}
+          myStorage={myStorage}
         />
       ))}
     </div>
