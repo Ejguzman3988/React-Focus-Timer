@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ClockContainer from "../Clock/ClockContainer";
+import Dropdown from "../Dropdown/Dropdown";
 import "./FocusTimer.css";
 
 export const FocusTimer = () => {
@@ -23,13 +24,7 @@ export const FocusTimer = () => {
         buttons={[`▶️`, `⏸️`, `⏹️`]}
         myStorage={myStorage}
       />
-      <div className="focus__theme">
-        {/* Dropdown Component */}
-        <div className="focus__label">Theme: </div>
-        <select className="focus__dropdown">
-          <option className="focus__option">something</option>
-        </select>
-      </div>
+      <Dropdown />
       <ClockContainer
         label={"High Score"}
         time={score}

@@ -35,7 +35,6 @@
   font-size: 1.5rem;
   color: var(--clockColor);
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   position: sticky;
@@ -49,4 +48,37 @@
 @font-face {
   font-family: digital-7;
   src: url(../../fonts/digital-7.ttf);
+}
+
+@media only screen and (max-width: 370px) {
+  .focus__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    -moz-transform: translateY(-30%) scale(0.5);
+    transform: translateY(-30%) scale(0.5);
+  }
+
+  .focus__theme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: var(--clockColor) solid;
+    border-bottom: var(--clockColor) solid;
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .focus__timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
