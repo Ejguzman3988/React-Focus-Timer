@@ -1,11 +1,6 @@
 import React, { useState } from "react";
-import Button from "../Button/Button";
 
-const ThemeOption = ({ themeOption, toggle, setToggle, setTheme, buttons }) => {
-  const [btn, setBtn] = useState(
-    buttons[Math.floor(Math.random() * buttons.length)]
-  );
-
+const ThemeOption = ({ themeOption, toggle, setToggle, setTheme }) => {
   const handleSelect = (e) => {
     if (!toggle) {
       console.log("newSet");
@@ -14,9 +9,6 @@ const ThemeOption = ({ themeOption, toggle, setToggle, setTheme, buttons }) => {
     setToggle((toggle) => !toggle);
   };
 
-  const handleBtn = (icon, idx) => {
-    setBtn(buttons[Math.floor(Math.random() * buttons.length)]);
-  };
   return (
     <div
       className="focus__option"

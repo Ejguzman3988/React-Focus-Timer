@@ -78,12 +78,7 @@ export const FocusTimer = () => {
         buttons={[`▶️`, `⏸️`, `⏹️`]}
         myStorage={myStorage}
       />
-      <Dropdown
-        buttons={[`▶️`, `⏸️`, `⏹️`]}
-        theme={theme}
-        setTheme={setTheme}
-        themes={themes}
-      />
+      <Dropdown theme={theme} setTheme={setTheme} themes={themes} />
       <ClockContainer
         label={"High Score"}
         time={score}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Dropdown.css";
 import ThemeOption from "./ThemeOption";
 
-const Dropdown = ({ theme, setTheme, themes, buttons }) => {
+const Dropdown = ({ theme, setTheme, themes }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -16,7 +16,6 @@ const Dropdown = ({ theme, setTheme, themes, buttons }) => {
                 themeOption={theme}
                 setTheme={setTheme}
                 setToggle={setToggle}
-                buttons={buttons}
               />
             ))
           : theme && (
@@ -26,7 +25,6 @@ const Dropdown = ({ theme, setTheme, themes, buttons }) => {
                 setTheme={setTheme}
                 toggle={toggle}
                 setToggle={setToggle}
-                buttons={[``]}
               />
             )}
       </ul>
