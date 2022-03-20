@@ -1,13 +1,20 @@
 :root {
+  /* elegant */
   --elegant-clockColor: #8a6626;
   --elegant-fontColor: #efc8b1;
   --elegant-backgroundColor: #efc8b1;
+
+  /* dependable */
   --dependable-clockColor: #241f1c;
   --dependable-fontColor: #937047;
   --dependable-backgroundColor: #937047;
+
+  /* friendly */
   --friendly-clockColor: #bdfff6;
   --friendly-fontColor: #e23c52;
   --friendly-backgroundColor: #e23c52;
+
+  /* laid-back */
   --laid-back-clockColor: #4d3227;
   --laid-back-fontColor: #ebc999;
   --laid-back-backgroundColor: #ebc999;
@@ -20,11 +27,21 @@
 }
 
 .focus__container {
-  font-size: 3rem;
-  font-weight: bolder;
-  text-align: center;
-  text-decoration: underline;
-  font-family: digital-7;
+  background-color: var(--backgroundColor);
+  border-bottom: var(--clockColor) solid;
+  box-shadow: var(--clockColor) 0px, 1px, 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: var(--clockColor);
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  width: 100%;
+}
+
+.focus__container > div {
+  display: inline-flex;
 }
 
 @font-face {
