@@ -8,7 +8,12 @@ export const FocusTimer = () => {
 
   return (
     <div className="focus__container">
-      <ClockContainer label={"Focus"} time={focus} setTime={setFocus} />
+      <ClockContainer
+        label={"Focus"}
+        time={focus}
+        setTime={setFocus}
+        buttons={[`▶️`, `⏸️`, `⏹️`]}
+      />
       <div className="focus__theme">
         {/* Dropdown Component */}
         <div className="focus__label">Theme: </div>
@@ -16,7 +21,12 @@ export const FocusTimer = () => {
           <option className="focus__option">something</option>
         </select>
       </div>
-      <ClockContainer label={"High Score"} time={score} setTime={setScore} />
+      <ClockContainer
+        label={"High Score"}
+        time={score}
+        setTime={setScore}
+        buttons={[`🔁`]}
+      />
     </div>
   );
 };

@@ -1,0 +1,15 @@
+.button:hover {
+  filter: brightness(90%) hue-rotate(var(--deg));
+}
+
+.button:active {
+  filter: hue-rotate(calc(var(--deg) + 30deg));
+}
+.button {
+  filter: hue-rotate(var(--deg));
+  cursor: pointer;
+}
+
+.button__selected {
+  filter: hue-rotate(calc(var(--deg) + 30deg)) brightness(130%);
+}
