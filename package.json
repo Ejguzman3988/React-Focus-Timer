@@ -1,6 +1,6 @@
 {
   "name": "react-focus-timer-v0",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "React Focus Timer is a simple timer that allows you to keep track of how long you focus. This will help you keep track of how long you are developing without getting distracted.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

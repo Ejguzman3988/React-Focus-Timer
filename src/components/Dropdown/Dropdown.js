@@ -10,7 +10,8 @@ const Dropdown = ({ theme, setTheme, themes }) => {
       <div className="focus__label">Theme: </div>
       <ul className="focus__dropdown">
         {toggle
-          ? themes?.map((theme, idx) => (
+          ? themes &&
+            themes.map((theme, idx) => (
               <ThemeOption
                 key={idx}
                 themeOption={theme}
